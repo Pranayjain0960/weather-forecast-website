@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Forecast</h1>
+        
+        <div class="search-container">
+            <input type="text" id="location" placeholder="Enter city name">
+            <button id="search-btn">Search</button>
+        </div>
+        
+        <div id="loading" class="loading pulse">
+            <p>Loading weather data...</p>
+        </div>
+        
+        <div id="error" class="error-message">
+            <p>Could not find weather data for this location. Please try again.</p>
+        </div>
+        
+        <div id="weather-info" class="weather-info">
+            <div class="current-weather">
+                <div>
+                    <h2 id="location-display" class="location-display">City Name</h2>
+                    <p id="current-date">Date</p>
+                    <p id="weather-description">Weather Description</p>
+                </div>
+                <div style="text-align: center;">
+                    <img id="weather-icon" class="weather-icon" src="/api/placeholder/80/80" alt="Weather icon">
+                    <p id="temp-main" class="temp-main">--°C</p>
+                </div>
+            </div>
+            
+            <div class="weather-details">
+                <div class="weather-detail">
+                    <p>Feels Like</p>
+                    <p id="feels-like" class="detail-value">--°C</p>
+                </div>
+                <div class="weather-detail">
+                    <p>Humidity</p>
+                    <p id="humidity" class="detail-value">--%</p>
+                </div>
+                <div class="weather-detail">
+                    <p>Wind Speed</p>
+                    <p id="wind-speed" class="detail-value">-- m/s</p>
+                </div>
+                <div class="weather-detail">
+                    <p>Pressure</p>
+                    <p id="pressure" class="detail-value">-- hPa</p>
+                </div>
+            </div>
+            
+            <h3>3-Day Forecast</h3>
+            <div id="forecast" class="forecast">
+                <!-- Forecast data will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
