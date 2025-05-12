@@ -12,6 +12,17 @@ locationInput.addEventListener('keypress', (e) => {
         getWeather();
     }
 });
+// loader animation  
+const loader = document.getElementById('loader');
+
+function showLoader() {
+  loader.style.display = 'block';
+}
+
+function hideLoader() {
+  loader.style.display = 'none';
+}
+
 
 // Initialize with default theme
 setTheme('clear', true);
